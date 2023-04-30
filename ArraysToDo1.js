@@ -31,6 +31,7 @@ function popFront(arr){
         newArr[i] = arr[i]
     }
     console.log(newArr)
+    return arr[0]
 }
 popFront([0,5,10,15])
 popFront([4,5,7,9])
@@ -61,17 +62,18 @@ insertAt([9,33,7], 1, 42)
 function removeAt(arr, idx){
     let newArr = []
     for(i=0;i<arr.length;i++){
-        if(i!=idx){
-            newArr[i]=arr[i]
+        if(i!==idx){
+            newArr.push(arr[i])
         }
     }
-    for(i=0;i<newArr.length;i++){
+    // for(i=0;i<newArr.length;i++){
 
-    }
+    // }
     console.log(newArr)
+    return arr[idx]
 }
-removeAt([1000,3,204,77], 1)
-removeAt([8,20,55,44,98], 3)
+console.log(removeAt([1000,3,204,77], 1))
+console.log(removeAt([8,20,55,44,98], 3))
 
 // BONUS: Swap Pairs
 // Swap positions of successive pairs of values of given array. If length is odd, do not change the final element.
@@ -102,3 +104,7 @@ swapPairs([3,6,2,8,4,9])
 // Examples:
 // removeDupes([-2,-2,3.14,5,5,10]) => [-2,3.14,5,10]
 // removeDupes([9,19,19,19,19,19,29]) => [9,19,29]
+
+function removeDupes(arr){
+    
+}
